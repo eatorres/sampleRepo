@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+.courseContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.favorite {
+  background-color: yellowgreen;
+  width: 200px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid;
+}
+.notFavorite {
+  background-color: white;
+  cursor: pointer;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid;
+}
+
+.filterButton {
+  background-color: yellow;
+  border: 1px solid black;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.courseDetails {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 200px;
+  border-top: 3px solid;
+  border-right: 3px solid;
+  border-color: black;
+}
+
+.instructorImage {
+  height: 150px;
+}
