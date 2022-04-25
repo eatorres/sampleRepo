@@ -64,7 +64,7 @@ body{
   justify-content: center;
 }
 .notFavorite {
-  background-color: white;
+  background-color: gray;
   cursor: pointer;
   max-width: 200px;
   min-width: 150px;
