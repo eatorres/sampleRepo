@@ -61,9 +61,11 @@ function App() {
     <div className="App">
       <div>COURSES</div>
       <div className="filterButton" onClick={() => setShowFavorites(!showFavorites)}>{ showFavorites ? "SHOW ALL": "SHOW FAVORITES"}</div>
-      {courses
-        .filter((courseInfo) => showFavorites ? courseInfo.favorite: true)
-        .map((courseInfo) => <Course key={courseInfo.id} setFavorite={setFavorite} courseInfo={courseInfo}/>)}
+      <div className="allCoursesContainer">
+        {courses
+          .filter((courseInfo) => showFavorites ? courseInfo.favorite: true)
+          .map((courseInfo) => <Course key={courseInfo.id} setFavorite={setFavorite} courseInfo={courseInfo}/>)}
+      </div>
     </div>
   );
 }

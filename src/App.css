@@ -1,5 +1,12 @@
+body{ 
+  -webkit-column-break-inside: avoid;
+}
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
 }
 
 .App-logo {
@@ -40,25 +47,30 @@
 .courseContainer {
   display: flex;
   flex-direction: row;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  margin: 0;
+  border: 3px solid;
 }
 
 .favorite {
   background-color: yellowgreen;
-  width: 200px;
+  max-width: 200px;
+  min-width: 150px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 3px solid;
 }
 .notFavorite {
   background-color: white;
   cursor: pointer;
-  width: 200px;
+  max-width: 200px;
+  min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 3px solid;
 }
 
 .filterButton {
@@ -67,20 +79,51 @@
   width: 200px;
   height: 50px;
   cursor: pointer;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .courseDetails {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
-  width: 200px;
-  border-top: 3px solid;
-  border-right: 3px solid;
-  border-color: black;
 }
 
 .instructorImage {
   height: 150px;
+  min-width: 150px;
+}
+
+.allCoursesContainer {
+  display: inline-block;
+  columns: 4;
+  column-gap: 0px;
+  width: 100%;
+}
+
+@media(max-width: 2000px) {
+  .allCoursesContainer {
+    columns: 3;
+    display: inline-block;
+    column-gap: 0px;
+  }
+}
+@media(max-width: 1150px) {
+  .allCoursesContainer {
+    columns: 2;
+    display: inline-block;
+    column-gap: 0px;
+  }
+}
+@media(max-width: 750px) {
+  .allCoursesContainer {
+    columns: 1;
+    display: inline-block;
+    column-gap: 0px;
+  }
 }
